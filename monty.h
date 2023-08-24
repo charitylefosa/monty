@@ -86,7 +86,7 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
 
-void _rot1(stack_t **doubly, unsigned int cline);
+void _rotl(stack_t **doubly, unsigned int cline);
 void _rotr(stack_t **doubly, unsigned int cline);
 
 void _push(stack_t **doubly, unsigned int cline);
