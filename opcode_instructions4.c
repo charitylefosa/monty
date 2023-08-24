@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
-*_rot1- rotate 1st element to the bottom & 2nd to the top
+*_rotl- rotate 1st element to the bottom & 2nd to the top
 *
 *@*doubly: head of the linked list
 *@cline: line number
 *
 */
 
-void _rot1(stack_t **doubly, unsigned int cline)
+void _rotl(stack_t **doubly, unsigned int cline)
 {
 	stack_t *aux1 = NULL;
 	stack_t *aux2 = NULL;
@@ -58,15 +58,3 @@ void _rotr(stack_t **doubly, unsigned int cline)
 	(*doubly)->prev = aux;
 	*doubly = aux;
 }
-
-
-
-
-
-
-
-
-
-
-
-
