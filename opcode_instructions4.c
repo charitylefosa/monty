@@ -22,7 +22,7 @@ void _rot1(stack_t **doubly, unsigned int cline)
 	aux1 = (*doubly)->next;
 	aux2 = *doubly;
 
-	for (; aux2->next != NULL; aux2 = aux2->next;
+	for (; aux2->next != NULL; aux2 = aux2->next);
 		;
 	aux1->prev = NULL;
 	aux2->next = *doubly;

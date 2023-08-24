@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "monty.h"
 
 /**
@@ -13,14 +14,14 @@ void _push(stack_t **doubly, unsigned int cline)
 	if (!vglo.arg)
 	{
 		dprintf(2, "L%u: ", cline);
-		dprintf(2. "usage: push integer\n")
-		free_vlog();
+		dprintf(2, "usage: push integer\n");
+		free_vglo();
 		exit(EXIT_FAILURE);
 	}
 
 	for (j = 0; vglo.arg[j] != '\0'; j++)
 	{
-		if (!isdigit(vglo.args[j]) && vglo.args[j] != '-')
+		if (!isdigit(vglo.arg[j]) && vglo.arg[j] != '-')
 		{
 			dprintf(2, "L%u: ", cline);
 			dprintf(2, "usage: push integer\n");
@@ -51,25 +52,25 @@ void _pall(stack_t **doubly, unsigned int cline)
 	{
 		dprintf(2, "L%u: ", cline);
 		dprintf(2, "usage: push integer\n");
-		free_yglo();
+		free_vglo();
 		exit(EXIT_FAILURE);
 	}
 	for (j = 0; vglo.arg[j] != '\0'; j++)
 	{
-		if (!isdigit(vglo.arg[j]) && vlog.arg[j] != '-')
+		if (!isdigit(vglo.arg[j]) && vglo.arg[j] != '-')
 		{
 			dprintf(2, "L%u: ", cline);
 			dprintf(2, "usage: push integer\n");
-			free_vlog();
+			free_vglo();
 			exit(EXIT_FAILURE);
 		}
 	}
 	n = atoi(vglo.arg);
 
 	if (vglo.lifo == 1)
-		add_dnodeint(doubly, n)
+		add_dnodeint(doubly, n);
 	else
-		add_dnodeint_end(doublt, n);
+		add_dnodeint_end(doubly, n);
 }
 
 /**
@@ -132,7 +133,7 @@ void _swap(stack_t **doubly, unsigned int cline)
 		;
 	if (m < 2)
 	{
-		dprintf(2, "L%u: can't swap, stack too short\n", cline)
+		dprintf(2, "L%u: can't swap, stack too short\n", cline);
 		free_vglo();
 		exit(EXIT_FAILURE);
 	}

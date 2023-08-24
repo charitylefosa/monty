@@ -11,7 +11,7 @@ void _queue(stack_t **doubly, unsigned int cline)
 	(void)doubly;
 	(void)cline;
 
-	vlog.lifo = 0;
+	vglo.lifo = 0;
 }
 
 /**
@@ -40,7 +40,7 @@ void _add(stack_t **doubly, unsigned cline)
 
 	aux = *doubly;
 
-	for (; aux != NULL; aux - aux->next, m++)
+	for (; aux != NULL; aux = aux->next, m++)
 		;
 	if (m < 2)
 	{
@@ -90,5 +90,5 @@ void _sub(stack_t **doubly, unsigned int cline)
 	}
 	aux = (*doubly)->next;
 	aux->n -= (*doubly)->n;
-	_pop(doubly, cline)
+	_pop(doubly, cline);
 }
